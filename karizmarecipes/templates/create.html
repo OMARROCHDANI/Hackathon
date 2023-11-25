@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #1e1e1e; 
+        color: #ffffff; 
+      }
+      body {
+        background-color: #1e1e1e; 
+        color: #ffffff;
+        font-family: "Arial", sans-serif; 
+        margin: 0;
+        padding: 20px;
+      }
+
+      nav {
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #4caf50; 
+        color: #ffffff; 
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        text-decoration: none; 
+      }
+
+      button:hover {
+        background-color: #45a049; 
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 5px;
+      }
+
+      img {
+        max-width: 20%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      form {
+        display: inline; 
+      }
+
+ 
+      button a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    </style>
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/authentication/signout/"
+        ><button type="submit">Signout</button></a
+      >
+    </nav>
+    <h2>Create Recipe</h2>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Create Recipe</button>
+    </form>
+    <br />
+    <button><a href="/recipe/recipelist/">view recipes</a></button>
+  </body>
+</html>
